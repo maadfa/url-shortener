@@ -5,9 +5,7 @@ A simple serverless URL shortener built with AWS Lambda, API Gateway, and Dynamo
 ## Technologies used:
 1. AWS Lambda:
  
-What it is:
-
-A service that runs code in the cloud without needing to set up or manage servers.
+What it is:A service that runs code in the cloud without needing to set up or manage servers.
 
 What it does here:When someone wants to shorten a long URL, Lambda creates a short version of it.When someone opens the short URL, Lambda finds the original link and redirects to it.
 
