@@ -376,7 +376,7 @@
 <h1 id="technologies-used_1">Technologies Used<a class="headerlink" href="#technologies-used_1" title="Permanent link">&para;</a></h1>
 <p>This project uses several Amazon Web Services (AWS) and developer tools to build a <strong>serverless</strong> and <strong>scalable</strong> URL shortener. Here's a breakdown of each technology used, what it does, and why it's important.</p>
 <hr />
-<h2 id="aws-lambda">⚙️ AWS Lambda<a class="headerlink" href="#aws-lambda" title="Permanent link">&para;</a></h2>
+<h2 id="aws-lambda">AWS Lambda<a class="headerlink" href="#aws-lambda" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
 AWS Lambda is a serverless computing service from Amazon. It runs your code <strong>only when needed</strong>, without requiring you to manage or provision any servers.</p>
 <p><strong>What it does in this project:</strong><br />
@@ -387,7 +387,7 @@ AWS Lambda is a serverless computing service from Amazon. It runs your code <str
 - <strong>Cost-efficient:</strong> You pay only for the time your function runs.
 - <strong>Scalable:</strong> Automatically handles more traffic when needed.</p>
 <hr />
-<h2 id="amazon-api-gateway">🌐 Amazon API Gateway<a class="headerlink" href="#amazon-api-gateway" title="Permanent link">&para;</a></h2>
+<h2 id="amazon-api-gateway">Amazon API Gateway<a class="headerlink" href="#amazon-api-gateway" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
 API Gateway is a fully managed service that makes it easy to create, publish, maintain, and monitor APIs (Application Programming Interfaces).</p>
 <p><strong>What it does in this project:</strong><br />
@@ -398,18 +398,18 @@ API Gateway is a fully managed service that makes it easy to create, publish, ma
 - <strong>Scalable:</strong> Automatically handles many incoming requests at once.
 - <strong>Flexible routing:</strong> You can map different routes like <code>/shorten</code> or <code>/{shortCode}</code> to different Lambda functions.</p>
 <hr />
-<h2 id="amazon-dynamodb">🗃️ Amazon DynamoDB<a class="headerlink" href="#amazon-dynamodb" title="Permanent link">&para;</a></h2>
+<h2 id="amazon-dynamodb">Amazon DynamoDB<a class="headerlink" href="#amazon-dynamodb" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
-DynamoDB is Amazon’s fast and flexible <strong>NoSQL database</strong> service, designed for high-performance applications.</p>
+DynamoDB is Amazon’s fast and flexible <strong>NoSQL database</strong> service and is designed for high-performance applications.</p>
 <p><strong>What it does in this project:</strong><br />
 - Stores the mapping between short codes and long URLs.
 - When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.</p>
 <p><strong>Why it's useful:</strong><br />
-- <strong>High performance:</strong> Quickly reads/writes data even at scale.
-- <strong>Serverless:</strong> No need to manage database servers.
+- <strong>High performance:</strong> Quickly reads/writes data even massive amount of data and leads to high performance.
+- <strong>Serverless:</strong> With serverless architecture,there is no need to manage database servers.This saves time and money.
 - <strong>Highly available:</strong> Your data is always accessible.</p>
 <hr />
-<h2 id="serverless-framework">🛠️ Serverless Framework<a class="headerlink" href="#serverless-framework" title="Permanent link">&para;</a></h2>
+<h2 id="serverless-framework">Serverless Framework<a class="headerlink" href="#serverless-framework" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
 The Serverless Framework is an open-source tool that helps you build and deploy serverless applications easily using Infrastructure as Code (IaC).</p>
 <p><strong>What it does in this project:</strong><br />
@@ -420,24 +420,22 @@ The Serverless Framework is an open-source tool that helps you build and deploy 
 - <strong>Reusable code:</strong> Write configuration once and use it across environments.
 - <strong>Faster development:</strong> Focus on your application, not the infrastructure.</p>
 <hr />
-<h2 id="http-methods-get-post">🌐 HTTP Methods: GET &amp; POST<a class="headerlink" href="#http-methods-get-post" title="Permanent link">&para;</a></h2>
+<h2 id="http-methods-get-post">HTTP Methods: GET &amp; POST<a class="headerlink" href="#http-methods-get-post" title="Permanent link">&para;</a></h2>
 <p><strong>What are they?</strong><br />
 They are types of requests sent from a client (like your browser or an app) to the server.</p>
-<ul>
-<li><code>POST</code>: Used when you <strong>send data</strong> to the app (e.g., a long URL to be shortened).</li>
-<li><code>GET</code>: Used when you <strong>request data</strong> (e.g., accessing a short URL to be redirected).</li>
-</ul>
+<p>POST: Post request is used when you <strong>send data</strong> to the app (e.g., a long URL to be shortened).
+ GET: Get request is used when you <strong>request data</strong> (e.g., getting a short URL ).</p>
 <p><strong>Why they're important:</strong><br />
 These methods are how users interact with your API. In this project:
 - A <code>POST</code> request is used to create a short link.
 - A <code>GET</code> request is used to open the short link and redirect the user.</p>
 <hr />
-<h2 id="yaml-serverlessyml">🧾 YAML (<code>serverless.yml</code>)<a class="headerlink" href="#yaml-serverlessyml" title="Permanent link">&para;</a></h2>
+<h2 id="yaml-serverlessyml">YAML (<code>serverless.yml</code>)<a class="headerlink" href="#yaml-serverlessyml" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
 YAML (Yet Another Markup Language) is a format used to write configuration files in a human-readable way.</p>
 <p><strong>What it does in this project:</strong><br />
 The <code>serverless.yml</code> file defines:
-- What functions to deploy
+- What functions to deploy for the particular service.
 - Which routes to expose (like <code>/shorten</code>)
 - What permissions and resources (like DynamoDB tables) your app needs</p>
 <p><strong>Why it's useful:</strong><br />
@@ -445,9 +443,9 @@ The <code>serverless.yml</code> file defines:
 - Easy to understand and edit
 - Keeps all setup in one place</p>
 <hr />
-<h2 id="python">📦 Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
-Python is a popular programming language known for its simplicity and readability.</p>
+Python is a popular programming language known for its simplicity and readability.It is widely used for automation function etc</p>
 <p><strong>What it does in this project:</strong><br />
 - The logic to shorten and expand URLs is written in Python (<code>handler.py</code> and <code>redirect.py</code>).</p>
 <p><strong>Why it's useful:</strong><br />
