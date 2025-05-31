@@ -432,17 +432,11 @@
 
 <h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
 <h2 id="flow-overview">Flow Overview<a class="headerlink" href="#flow-overview" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>User sends a POST request</strong> to shorten a long URL.</li>
-<li></li>
-<li><strong>API Gateway</strong> receives the request and sends it to a <strong>Lambda function</strong>.</li>
-<li></li>
-<li><strong>Lambda</strong> generates a short code and stores it in <strong>DynamoDB</strong> with the original URL.</li>
-<li></li>
-<li><strong>GET request</strong> to the short URL triggers another Lambda function.</li>
-<li></li>
-<li><strong>Lambda</strong> looks up the code in <strong>DynamoDB</strong> and <strong>redirects</strong> the user to the original long URL.</li>
-</ol>
+<p><strong>User sends a POST request</strong> to shorten a long URL.</p>
+<p><strong>API Gateway</strong> receives the request and sends it to a <strong>Lambda function</strong>.</p>
+<p><strong>Lambda</strong> generates a short code and stores it in <strong>DynamoDB</strong> with the original URL.</p>
+<p><strong>GET request</strong> to the short URL triggers another Lambda function.</p>
+<p><strong>Lambda</strong> looks up the code in <strong>DynamoDB</strong> and <strong>redirects</strong> the user to the original long URL.</p>
 
 
 
