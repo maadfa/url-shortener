@@ -1,7 +1,5 @@
 # Technologies Used
 
-# Technologies Used
-
 This project uses several Amazon Web Services (AWS) and developer tools to build a **serverless** and **scalable** URL shortener. Here's a breakdown of each technology used, what it does, and why it's important.
 
 ---
@@ -28,12 +26,16 @@ AWS Lambda is a serverless computing service from Amazon. It runs your code **on
 API Gateway is a fully managed service that makes it easy to create, publish, maintain, and monitor APIs (Application Programming Interfaces).
 
 **What it does in this project:**  
-- Acts as the **entry point** to the application.
-- Receives HTTP requests (`POST` to shorten URLs and `GET` to retrieve them) and passes them to the correct Lambda function.
+   API Gateway acts as the **entry point** to the application.
 
-**Why it's useful:**  
+   It receives HTTP requests **POST** to shorten URLs and **GET** to get them and passes them to the correct Lambda function.
+
+**Why it's useful:** 
+
 - **Security & control:** You can manage who accesses your APIs.
+- 
 - **Scalable:** Automatically handles many incoming requests at once.
+- 
 - **Flexible routing:** You can map different routes like `/shorten` or `/{shortCode}` to different Lambda functions.
 
 ---
@@ -49,8 +51,8 @@ DynamoDB is Amazon’s fast and flexible **NoSQL database** service and is desig
 
 **Why it's useful:**  
 - **High performance:** Quickly reads/writes data even massive amount of data and leads to high performance.
-- **Serverless:** With serverless architecture,there is no need to manage database servers.This saves time and money.
-- **Highly available:** Your data is always accessible.
+ **Serverless:** With serverless architecture,there is no need to manage database servers.This saves time and money.
+ **Highly available:** Your data is always accessible.
 
 ---
 

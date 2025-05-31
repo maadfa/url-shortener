@@ -14,7 +14,7 @@ This is a step by step guide to build serverless URL shortner using  AWS free ti
 3. The Lambda function:
    - Generates a unique short code.
    - Saves the short code and original URL to **DynamoDB**.
-4. When someone accesses the short link (`GET /{shortCode}`), another Lambda function:
+4. When someone accesses the short link (`GET /shortCode`), another Lambda function:
    - Looks up the code in DynamoDB.
    - Redirects the user to the original long URL.
 
