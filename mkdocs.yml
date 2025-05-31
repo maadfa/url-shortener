@@ -1,0 +1,25 @@
+site_name: Serverless URL Shortener
+site_description: A lightweight, serverless application to shorten URLs using AWS services.
+site_author: Your Name
+repo_url: https://github.com/your-username/your-repo-name
+theme:
+  name: material
+  language: en
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Technologies: technologies.md
+  - Features: features.md
+  - API Guide: api.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - codehilite
+  - admonition
+
+extra_css: []
+extra_javascript: []
