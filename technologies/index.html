@@ -334,24 +334,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-security-control-you-can-manage-who-accesses-your-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Security &amp; control: You can manage who accesses your APIs.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-scalable-automatically-handles-many-incoming-requests-at-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Scalable: Automatically handles many incoming requests at once.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#amazon-dynamodb" class="md-nav__link">
     <span class="md-ellipsis">
       Amazon DynamoDB
@@ -493,24 +475,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-security-control-you-can-manage-who-accesses-your-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Security &amp; control: You can manage who accesses your APIs.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-scalable-automatically-handles-many-incoming-requests-at-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Scalable: Automatically handles many incoming requests at once.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#amazon-dynamodb" class="md-nav__link">
     <span class="md-ellipsis">
       Amazon DynamoDB
@@ -581,12 +545,12 @@
 <p><strong>What is it?</strong><br />
 AWS Lambda is a serverless computing service from Amazon. It runs your code <strong>only when needed</strong>, without requiring you to manage or provision any servers.</p>
 <p><strong>What it does in this project:</strong><br />
-- When a user submits a long URL, a Lambda function is triggered to generate a short code and save it in the database.
-- When a user clicks a short URL, another Lambda function is triggered to fetch the original URL and redirect the user.</p>
+ When a user submits a long URL, a Lambda function is triggered to generate a short code and save it in the database.</p>
+<p>When a user clicks a short URL, another Lambda function is triggered to fetch the original URL and redirect the user.</p>
 <p><strong>Why it's useful:</strong><br />
-- <strong>No server management:</strong> You only write your code; AWS handles the rest.
-- <strong>Cost-efficient:</strong> You pay only for the time your function runs.
-- <strong>Scalable:</strong> Automatically handles more traffic when needed.</p>
+<strong>No server management:</strong> You only write your code; AWS handles the rest.</p>
+<p><strong>Cost-efficient:</strong> You pay only for the time your function runs.</p>
+<p><strong>Scalable:</strong> Automatically handles more traffic when needed.</p>
 <hr />
 <h2 id="amazon-api-gateway">Amazon API Gateway<a class="headerlink" href="#amazon-api-gateway" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
@@ -595,56 +559,54 @@ API Gateway is a fully managed service that makes it easy to create, publish, ma
    API Gateway acts as the <strong>entry point</strong> to the application.</p>
 <p>It receives HTTP requests <strong>POST</strong> to shorten URLs and <strong>GET</strong> to get them and passes them to the correct Lambda function.</p>
 <p><strong>Why it's useful:</strong> </p>
-<h2 id="-security-control-you-can-manage-who-accesses-your-apis">- <strong>Security &amp; control:</strong> You can manage who accesses your APIs.<a class="headerlink" href="#-security-control-you-can-manage-who-accesses-your-apis" title="Permanent link">&para;</a></h2>
-<h2 id="-scalable-automatically-handles-many-incoming-requests-at-once">- <strong>Scalable:</strong> Automatically handles many incoming requests at once.<a class="headerlink" href="#-scalable-automatically-handles-many-incoming-requests-at-once" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Flexible routing:</strong> You can map different routes like <code>/shorten</code> or <code>/{shortCode}</code> to different Lambda functions.</li>
-</ul>
+<p><strong>Security &amp; control:</strong> You can manage who accesses your APIs.</p>
+<p><strong>Scalable:</strong> Automatically handles many incoming requests at once.</p>
+<p><strong>Flexible routing:</strong> You can map different routes like <code>/shorten</code> or <code>/{shortCode}</code> to different Lambda functions.</p>
 <hr />
 <h2 id="amazon-dynamodb">Amazon DynamoDB<a class="headerlink" href="#amazon-dynamodb" title="Permanent link">&para;</a></h2>
-<p><strong>What is it?</strong><br />
-DynamoDB is Amazon’s fast and flexible <strong>NoSQL database</strong> service and is designed for high-performance applications.</p>
+<p><strong>What is it?</strong>  </p>
+<p>DynamoDB is Amazon’s fast and flexible <strong>NoSQL database</strong> service and is designed for high-performance applications.</p>
 <p><strong>What it does in this project:</strong><br />
-- Stores the mapping between short codes and long URLs.
-- When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.</p>
-<p><strong>Why it's useful:</strong><br />
-- <strong>High performance:</strong> Quickly reads/writes data even massive amount of data and leads to high performance.
- <strong>Serverless:</strong> With serverless architecture,there is no need to manage database servers.This saves time and money.
- <strong>Highly available:</strong> Your data is always accessible.</p>
+ Stores the mapping between short codes and long URLs.</p>
+<p>When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.</p>
+<p><strong>Why it's useful:</strong>  </p>
+<p><strong>High performance:</strong> Quickly reads/writes data even massive amount of data and leads to high performance.</p>
+<p><strong>Serverless:</strong> With serverless architecture,there is no need to manage database servers.This saves time and money.</p>
+<p><strong>Highly available:</strong> Your data is always accessible.</p>
 <hr />
 <h2 id="serverless-framework">Serverless Framework<a class="headerlink" href="#serverless-framework" title="Permanent link">&para;</a></h2>
-<p><strong>What is it?</strong><br />
-The Serverless Framework is an open-source tool that helps you build and deploy serverless applications easily using Infrastructure as Code (IaC).</p>
-<p><strong>What it does in this project:</strong><br />
-- Manages the deployment of Lambda, API Gateway, and DynamoDB using one simple configuration file (<code>serverless.yml</code>).
-- Automates the creation of AWS resources with a single command (<code>sls deploy</code>).</p>
-<p><strong>Why it's useful:</strong><br />
-- <strong>Simple deployments:</strong> Deploy everything with one command.
-- <strong>Reusable code:</strong> Write configuration once and use it across environments.
-- <strong>Faster development:</strong> Focus on your application, not the infrastructure.</p>
+<p><strong>What is it?</strong>  </p>
+<p>The Serverless Framework is an open-source tool that helps you build and deploy serverless applications easily using Infrastructure as Code (IaC).</p>
+<p><strong>What it does in this project:</strong>  </p>
+<p>It manages the deployment of Lambda, API Gateway, and DynamoDB  by use of  one simple configuration file (<code>serverless.yml</code>).</p>
+<p>It automates the creation of AWS resources with a single command (<code>sls deploy</code>).</p>
+<p><strong>Why it's useful:</strong>  </p>
+<p><strong>Simple deployments:</strong> Deploy everything with one command.</p>
+<p><strong>Reusable code:</strong> Write configuration once and use it across environments.</p>
+<p><strong>Faster development:</strong> Focus on your application, not the infrastructure.</p>
 <hr />
 <h2 id="http-methods-get-post">HTTP Methods: GET &amp; POST<a class="headerlink" href="#http-methods-get-post" title="Permanent link">&para;</a></h2>
-<p><strong>What are they?</strong><br />
-They are types of requests sent from a client (like your browser or an app) to the server.</p>
-<p>POST: Post request is used when you <strong>send data</strong> to the app (e.g., a long URL to be shortened).
- GET: Get request is used when you <strong>request data</strong> (e.g., getting a short URL ).</p>
-<p><strong>Why they're important:</strong><br />
-These methods are how users interact with your API. In this project:
-- A <code>POST</code> request is used to create a short link.
-- A <code>GET</code> request is used to open the short link and redirect the user.</p>
+<p><strong>What are they?</strong>  </p>
+<p>They are types of requests sent from a client (like your browser or an app) to the server.</p>
+<p>POST: Post request is used when you <strong>send data</strong> to the app (e.g., a long URL to be shortened).</p>
+<p>GET: Get request is used when you <strong>request data</strong> (e.g., getting a short URL ).</p>
+<p><strong>Why they're important:</strong>  </p>
+<p>These methods are how users interact with your API. In this project:</p>
+<p>A <code>POST</code> request is used to create a short link.</p>
+<p>A <code>GET</code> request is used to open the short link and redirect the user.</p>
 <hr />
 <h2 id="yaml-serverlessyml">YAML (<code>serverless.yml</code>)<a class="headerlink" href="#yaml-serverlessyml" title="Permanent link">&para;</a></h2>
-<p><strong>What is it?</strong><br />
-YAML (Yet Another Markup Language) is a format used to write configuration files in a human-readable way.</p>
-<p><strong>What it does in this project:</strong><br />
-The <code>serverless.yml</code> file defines:
-- What functions to deploy for the particular service.
-- Which routes to expose (like <code>/shorten</code>)
-- What permissions and resources (like DynamoDB tables) your app needs</p>
-<p><strong>Why it's useful:</strong><br />
-- Makes deployments predictable
-- Easy to understand and edit
-- Keeps all setup in one place</p>
+<p><strong>What is it?</strong>  </p>
+<p>YAML (Yet Another Markup Language) is a format used to write configuration files in a human-readable way.</p>
+<p><strong>What it does in this project:</strong>  </p>
+<p>The <code>serverless.yml</code> file defines:</p>
+<p>What functions to deploy for the particular service.</p>
+<p>Which routes to expose (like <code>/shorten</code>)</p>
+<p>What permissions and resources (like DynamoDB tables) your app needs</p>
+<p><strong>Why it's useful:</strong>  </p>
+<p>It makes deployments predictable</p>
+<p>It is easy to understand and edit</p>
+<p>It keeps all setup in one place</p>
 <hr />
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p><strong>What is it?</strong><br />
