@@ -10,13 +10,16 @@ This project uses several Amazon Web Services (AWS) and developer tools to build
 AWS Lambda is a serverless computing service from Amazon. It runs your code **only when needed**, without requiring you to manage or provision any servers.
 
 **What it does in this project:**  
-- When a user submits a long URL, a Lambda function is triggered to generate a short code and save it in the database.
-- When a user clicks a short URL, another Lambda function is triggered to fetch the original URL and redirect the user.
+ When a user submits a long URL, a Lambda function is triggered to generate a short code and save it in the database.
+
+ When a user clicks a short URL, another Lambda function is triggered to fetch the original URL and redirect the user.
 
 **Why it's useful:**  
-- **No server management:** You only write your code; AWS handles the rest.
-- **Cost-efficient:** You pay only for the time your function runs.
-- **Scalable:** Automatically handles more traffic when needed.
+ **No server management:** You only write your code; AWS handles the rest.
+
+ **Cost-efficient:** You pay only for the time your function runs.
+
+ **Scalable:** Automatically handles more traffic when needed.
 
 ---
 
@@ -32,26 +35,35 @@ API Gateway is a fully managed service that makes it easy to create, publish, ma
 
 **Why it's useful:** 
 
-- **Security & control:** You can manage who accesses your APIs.
-- 
-- **Scalable:** Automatically handles many incoming requests at once.
-- 
-- **Flexible routing:** You can map different routes like `/shorten` or `/{shortCode}` to different Lambda functions.
+ **Security & control:** You can manage who accesses your APIs.
+ 
+ **Scalable:** Automatically handles many incoming requests at once.
+ 
+  **Flexible routing:** You can map different routes like `/shorten` or `/{shortCode}` to different Lambda functions.
 
 ---
 
 ##  Amazon DynamoDB
 
 **What is it?**  
+
+
 DynamoDB is Amazon’s fast and flexible **NoSQL database** service and is designed for high-performance applications.
 
 **What it does in this project:**  
-- Stores the mapping between short codes and long URLs.
-- When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.
+ Stores the mapping between short codes and long URLs.
+  
+ When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.
 
 **Why it's useful:**  
-- **High performance:** Quickly reads/writes data even massive amount of data and leads to high performance.
+
+
+ **High performance:** Quickly reads/writes data even massive amount of data and leads to high performance.
+
+ 
  **Serverless:** With serverless architecture,there is no need to manage database servers.This saves time and money.
+
+
  **Highly available:** Your data is always accessible.
 
 ---
@@ -59,49 +71,73 @@ DynamoDB is Amazon’s fast and flexible **NoSQL database** service and is desig
 ## Serverless Framework
 
 **What is it?**  
+
+
 The Serverless Framework is an open-source tool that helps you build and deploy serverless applications easily using Infrastructure as Code (IaC).
 
 **What it does in this project:**  
-- Manages the deployment of Lambda, API Gateway, and DynamoDB using one simple configuration file (`serverless.yml`).
-- Automates the creation of AWS resources with a single command (`sls deploy`).
+
+
+  It manages the deployment of Lambda, API Gateway, and DynamoDB  by use of  one simple configuration file (`serverless.yml`).
+ 
+  It automates the creation of AWS resources with a single command (`sls deploy`).
 
 **Why it's useful:**  
-- **Simple deployments:** Deploy everything with one command.
-- **Reusable code:** Write configuration once and use it across environments.
-- **Faster development:** Focus on your application, not the infrastructure.
+
+
+ **Simple deployments:** Deploy everything with one command.
+ 
+ **Reusable code:** Write configuration once and use it across environments.
+ 
+ **Faster development:** Focus on your application, not the infrastructure.
 
 ---
 
 ##  HTTP Methods: GET & POST
 
 **What are they?**  
+
+
 They are types of requests sent from a client (like your browser or an app) to the server.
 
  POST: Post request is used when you **send data** to the app (e.g., a long URL to be shortened).
+
+
  GET: Get request is used when you **request data** (e.g., getting a short URL ).
 
 **Why they're important:**  
+
 These methods are how users interact with your API. In this project:
-- A `POST` request is used to create a short link.
-- A `GET` request is used to open the short link and redirect the user.
+
+ A `POST` request is used to create a short link.
+ 
+ A `GET` request is used to open the short link and redirect the user.
 
 ---
 
 ##  YAML (`serverless.yml`)
 
 **What is it?**  
+
 YAML (Yet Another Markup Language) is a format used to write configuration files in a human-readable way.
 
 **What it does in this project:**  
+
 The `serverless.yml` file defines:
-- What functions to deploy for the particular service.
-- Which routes to expose (like `/shorten`)
-- What permissions and resources (like DynamoDB tables) your app needs
+
+ What functions to deploy for the particular service.
+ 
+ Which routes to expose (like `/shorten`)
+ 
+ What permissions and resources (like DynamoDB tables) your app needs
 
 **Why it's useful:**  
-- Makes deployments predictable
-- Easy to understand and edit
-- Keeps all setup in one place
+
+   It makes deployments predictable
+ 
+   It is easy to understand and edit
+ 
+   It keeps all setup in one place
 
 ---
 

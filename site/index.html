@@ -385,7 +385,7 @@
 <li>The Lambda function:</li>
 <li>Generates a unique short code.</li>
 <li>Saves the short code and original URL to <strong>DynamoDB</strong>.</li>
-<li>When someone accesses the short link (<code>GET /{shortCode}</code>), another Lambda function:</li>
+<li>When someone accesses the short link (<code>GET /shortCode</code>), another Lambda function:</li>
 <li>Looks up the code in DynamoDB.</li>
 <li>Redirects the user to the original long URL.</li>
 </ol>
