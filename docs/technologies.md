@@ -6,7 +6,7 @@ This project uses several Amazon Web Services (AWS) and developer tools to build
 
 ---
 
-## ⚙️ AWS Lambda
+##  AWS Lambda
 
 **What is it?**  
 AWS Lambda is a serverless computing service from Amazon. It runs your code **only when needed**, without requiring you to manage or provision any servers.
@@ -22,7 +22,7 @@ AWS Lambda is a serverless computing service from Amazon. It runs your code **on
 
 ---
 
-## 🌐 Amazon API Gateway
+## Amazon API Gateway
 
 **What is it?**  
 API Gateway is a fully managed service that makes it easy to create, publish, maintain, and monitor APIs (Application Programming Interfaces).
@@ -38,23 +38,23 @@ API Gateway is a fully managed service that makes it easy to create, publish, ma
 
 ---
 
-## 🗃️ Amazon DynamoDB
+##  Amazon DynamoDB
 
 **What is it?**  
-DynamoDB is Amazon’s fast and flexible **NoSQL database** service, designed for high-performance applications.
+DynamoDB is Amazon’s fast and flexible **NoSQL database** service and is designed for high-performance applications.
 
 **What it does in this project:**  
 - Stores the mapping between short codes and long URLs.
 - When someone enters a short code, the app looks it up in DynamoDB to find the matching original URL.
 
 **Why it's useful:**  
-- **High performance:** Quickly reads/writes data even at scale.
-- **Serverless:** No need to manage database servers.
+- **High performance:** Quickly reads/writes data even massive amount of data and leads to high performance.
+- **Serverless:** With serverless architecture,there is no need to manage database servers.This saves time and money.
 - **Highly available:** Your data is always accessible.
 
 ---
 
-## 🛠️ Serverless Framework
+## Serverless Framework
 
 **What is it?**  
 The Serverless Framework is an open-source tool that helps you build and deploy serverless applications easily using Infrastructure as Code (IaC).
@@ -70,13 +70,13 @@ The Serverless Framework is an open-source tool that helps you build and deploy 
 
 ---
 
-## 🌐 HTTP Methods: GET & POST
+##  HTTP Methods: GET & POST
 
 **What are they?**  
 They are types of requests sent from a client (like your browser or an app) to the server.
 
-- `POST`: Used when you **send data** to the app (e.g., a long URL to be shortened).
-- `GET`: Used when you **request data** (e.g., accessing a short URL to be redirected).
+ POST: Post request is used when you **send data** to the app (e.g., a long URL to be shortened).
+ GET: Get request is used when you **request data** (e.g., getting a short URL ).
 
 **Why they're important:**  
 These methods are how users interact with your API. In this project:
@@ -85,14 +85,14 @@ These methods are how users interact with your API. In this project:
 
 ---
 
-## 🧾 YAML (`serverless.yml`)
+##  YAML (`serverless.yml`)
 
 **What is it?**  
 YAML (Yet Another Markup Language) is a format used to write configuration files in a human-readable way.
 
 **What it does in this project:**  
 The `serverless.yml` file defines:
-- What functions to deploy
+- What functions to deploy for the particular service.
 - Which routes to expose (like `/shorten`)
 - What permissions and resources (like DynamoDB tables) your app needs
 
@@ -103,10 +103,10 @@ The `serverless.yml` file defines:
 
 ---
 
-## 📦 Python
+##  Python
 
 **What is it?**  
-Python is a popular programming language known for its simplicity and readability.
+Python is a popular programming language known for its simplicity and readability.It is widely used for automation function etc
 
 **What it does in this project:**  
 - The logic to shorten and expand URLs is written in Python (`handler.py` and `redirect.py`).

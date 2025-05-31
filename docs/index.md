@@ -5,7 +5,7 @@ This is a step by step guide to build serverless URL shortner using  AWS free ti
 - **AWS Lambda** for handling the logic
 - **API Gateway** for routing HTTP requests
 - **DynamoDB** for storing URL mappings
-- **Serverless Framework** for deployment
+- **Serverless Framework** for deployment purpose
   
   The overview of interconnection of each  service works is given below.
   
